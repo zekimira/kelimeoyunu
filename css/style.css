@@ -204,73 +204,37 @@ body {
 /* iPhone Safari için özel stiller */
 @supports (-webkit-touch-callout: none) {
     @media (max-width: 768px) {
+        /* Sadece kategori ve zorluk butonları */
         .category-btn, .difficulty-btn {
             padding: 25px 35px;
-            font-size: 24px !important; /* px kullanarak */
+            font-size: 24px !important;
             width: 90%;
             margin: 8px 0;
             letter-spacing: 1px;
-            -webkit-appearance: none; /* Safari için */
+            -webkit-appearance: none;
         }
 
+        /* Diğer butonları normal boyutta tutalım */
         .back-to-category {
-            padding: 20px 30px;
-            font-size: 22px !important;
-            margin-top: 2rem;
-            width: 90%;
-            -webkit-appearance: none;
+            padding: 8px 16px;
+            font-size: 1rem !important;
         }
 
         .back-btn {
-            padding: 18px 30px;
-            font-size: 20px !important;
-            -webkit-appearance: none;
+            padding: 10px 20px;
+            font-size: 1rem !important;
         }
 
         .score {
-            padding: 18px 30px;
-            font-size: 20px !important;
-        }
-
-        .start-screen h1 {
-            font-size: 32px !important;
-        }
-
-        .start-screen h2 {
-            font-size: 24px !important;
-        }
-
-        .turkish-word {
-            font-size: 28px !important;
-            padding: 20px 35px;
-            bottom: 60px;
-        }
-
-        .balloon {
-            min-width: 120px;
-            max-width: 150px;
-            height: 140px;
-            font-size: 22px !important;
-            font-weight: 800;
-            padding: 20px;
-            letter-spacing: 0.5px;
-            -webkit-tap-highlight-color: transparent;
+            padding: 10px 20px;
+            font-size: 1.2rem !important;
         }
     }
 }
 
-/* Mevcut mobil stiller aynı kalacak */
+/* Normal mobil stiller */
 @media (max-width: 768px) {
-    .balloon {
-        min-width: 120px;
-        max-width: 150px;
-        height: 140px;
-        font-size: 22px;
-        font-weight: 800;
-        padding: 20px;
-        letter-spacing: 0.5px;
-    }
-
+    /* Sadece kategori ve zorluk butonları */
     .category-btn, .difficulty-btn {
         padding: 25px 35px;
         font-size: 2rem;
@@ -279,45 +243,30 @@ body {
         letter-spacing: 1px;
     }
 
+    /* Diğer butonları normal boyutta tutalım */
+    .back-to-category {
+        padding: 8px 16px;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .back-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .score {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+    }
+
+    /* Buton container'ları */
     .category-buttons, .difficulty-buttons {
         flex-direction: column;
         align-items: center;
         gap: 2rem;
         width: 100%;
         padding: 0 20px;
-    }
-
-    .back-to-category {
-        padding: 20px 30px;
-        font-size: 1.8rem;
-        margin-top: 2rem;
-        width: 90%;
-    }
-
-    .start-screen {
-        padding: 3rem;
-        width: 95%;
-    }
-
-    .back-btn {
-        padding: 18px 30px;
-        font-size: 1.6rem;
-    }
-
-    .score {
-        padding: 18px 30px;
-        font-size: 1.6rem;
-    }
-
-    .turkish-word {
-        font-size: 2.4rem;
-        padding: 20px 35px;
-        bottom: 60px;
-    }
-
-    .menu {
-        top: 30px;
-        gap: 25px;
     }
 }
 
