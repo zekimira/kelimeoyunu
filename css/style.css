@@ -203,48 +203,62 @@ body {
 
 @media (max-width: 768px) {
     .balloon {
-        min-width: 110px;
-        max-width: 140px;
-        height: 130px;
-        font-size: 20px;
+        min-width: 120px;
+        max-width: 150px;
+        height: 140px;
+        font-size: 22px;
         font-weight: 800;
-        padding: 18px;
+        padding: 20px;
         letter-spacing: 0.5px;
     }
 
     .category-btn, .difficulty-btn {
-        padding: 20px 30px;
-        font-size: 1.6rem;
-        width: 80%;
-        margin: 5px 0;
+        padding: 25px 35px;
+        font-size: 2rem;
+        width: 90%;
+        margin: 8px 0;
+        letter-spacing: 1px;
     }
 
     .category-buttons, .difficulty-buttons {
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 2rem;
         width: 100%;
+        padding: 0 20px;
     }
 
     .back-to-category {
-        padding: 15px 25px;
-        font-size: 1.4rem;
-        margin-top: 1.5rem;
+        padding: 20px 30px;
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        width: 90%;
     }
 
     .start-screen {
-        padding: 2.5rem;
+        padding: 3rem;
         width: 95%;
     }
 
     .back-btn {
-        padding: 15px 25px;
-        font-size: 1.3rem;
+        padding: 18px 30px;
+        font-size: 1.6rem;
     }
 
     .score {
-        padding: 15px 25px;
-        font-size: 1.4rem;
+        padding: 18px 30px;
+        font-size: 1.6rem;
+    }
+
+    .turkish-word {
+        font-size: 2.4rem;
+        padding: 20px 35px;
+        bottom: 60px;
+    }
+
+    .menu {
+        top: 30px;
+        gap: 25px;
     }
 }
 
