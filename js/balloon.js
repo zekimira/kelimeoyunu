@@ -74,17 +74,17 @@ class Balloon {
                 return;
             }
             
-            // İlk iki balon normal hızda, diğerleri biraz daha hızlı
-            const speedMultiplier = parseInt(this.element.style.top) < -200 ? 1.2 : 1;
+            // Mobilde hızı artırdık ve daha akıcı hareket için speedMultiplier'ı artırdık
+            const speedMultiplier = parseInt(this.element.style.top) < -200 ? 1.4 : 1.2;
             const currentSpeed = isMobile ? 
-                baseSpeed * 0.8 * speedMultiplier : 
+                baseSpeed * 1.2 * speedMultiplier : // 0.8'den 1.2'ye çıkardık
                 baseSpeed * speedMultiplier;
             
             pos += currentSpeed;
             
-            // Sallanma efekti - mobilde daha az sallanma
-            const wobbleIntensity = isMobile ? 8 : 15;
-            const wobble = Math.sin(pos * 0.02) * wobbleIntensity;
+            // Sallanma efektini azalttık
+            const wobbleIntensity = isMobile ? 5 : 15; // 8'den 5'e düşürdük
+            const wobble = Math.sin(pos * 0.015) * wobbleIntensity; // 0.02'den 0.015'e düşürdük
             this.element.style.transform = `translateX(${wobble}px)`;
             
             this.element.style.top = `${pos}px`;
