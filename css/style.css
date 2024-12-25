@@ -29,7 +29,6 @@ body {
     position: relative;
 }
 
-/* Başlangıç ekranı */
 .start-screen {
     background: rgba(255, 255, 255, 0.1);
     padding: 3rem;
@@ -55,7 +54,6 @@ body {
     color: var(--text-color);
 }
 
-/* Kategori ve Zorluk Butonları */
 .category-buttons, .difficulty-buttons {
     display: flex;
     gap: 1rem;
@@ -86,9 +84,8 @@ body {
     box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
 }
 
-/* Zorluk seviyesi butonları için özel renkler */
 .difficulty-btn[data-level="kolay"] {
-    background: #4ECDC4;  /* Turkuaz */
+    background: #4ECDC4;
     box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
 }
 
@@ -98,7 +95,7 @@ body {
 }
 
 .difficulty-btn[data-level="orta"] {
-    background: #FFB845;  /* Turuncu */
+    background: #FFB845;
     box-shadow: 0 4px 15px rgba(255, 184, 69, 0.3);
 }
 
@@ -108,7 +105,7 @@ body {
 }
 
 .difficulty-btn[data-level="zor"] {
-    background: #FF6B6B;  /* Mercan kırmızısı */
+    background: #FF6B6B;
     box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
 
@@ -130,7 +127,6 @@ body {
     box-shadow: 0 6px 20px rgba(255, 217, 61, 0.4);
 }
 
-/* Oyun Ekranı */
 .game-screen {
     width: 100%;
     height: 100%;
@@ -175,7 +171,6 @@ body {
     box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
 }
 
-/* Balon Stilleri */
 .balloon {
     position: absolute;
     display: flex;
@@ -202,22 +197,59 @@ body {
 }
 
 @media (max-width: 768px) {
-    .balloon {
-        min-width: 120px;
-        max-width: 150px;
-        height: 140px;
-        font-size: 22px;
-        font-weight: 800;
-        padding: 20px;
-        letter-spacing: 0.5px;
+    .category-btn, .difficulty-btn {
+        padding: 30px 40px;
+        font-size: 2.4rem;
+        width: 90%;
+        margin: 10px 0;
+        letter-spacing: 1.2px;
     }
 
-    .category-btn, .difficulty-btn {
+    .back-to-category {
         padding: 25px 35px;
-        font-size: 2rem;
+        font-size: 2.2rem;
+        margin-top: 2.5rem;
         width: 90%;
-        margin: 8px 0;
-        letter-spacing: 1px;
+    }
+
+    .back-btn {
+        padding: 20px 35px;
+        font-size: 2rem;
+    }
+
+    .score {
+        padding: 20px 35px;
+        font-size: 2rem;
+    }
+
+    .start-screen h1 {
+        font-size: 3.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .start-screen h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .balloon {
+        min-width: 130px;
+        max-width: 160px;
+        height: 150px;
+        font-size: 26px;
+        font-weight: 800;
+        padding: 25px;
+    }
+
+    .turkish-word {
+        font-size: 2.8rem;
+        padding: 25px 40px;
+        bottom: 70px;
+    }
+
+    .menu {
+        top: 35px;
+        gap: 30px;
     }
 
     .category-buttons, .difficulty-buttons {
@@ -226,39 +258,6 @@ body {
         gap: 2rem;
         width: 100%;
         padding: 0 20px;
-    }
-
-    .back-to-category {
-        padding: 20px 30px;
-        font-size: 1.8rem;
-        margin-top: 2rem;
-        width: 90%;
-    }
-
-    .start-screen {
-        padding: 3rem;
-        width: 95%;
-    }
-
-    .back-btn {
-        padding: 18px 30px;
-        font-size: 1.6rem;
-    }
-
-    .score {
-        padding: 18px 30px;
-        font-size: 1.6rem;
-    }
-
-    .turkish-word {
-        font-size: 2.4rem;
-        padding: 20px 35px;
-        bottom: 60px;
-    }
-
-    .menu {
-        top: 30px;
-        gap: 25px;
     }
 }
 
@@ -277,16 +276,15 @@ body {
     transform: scale(1.1);
 }
 
-/* Türkçe Kelime */
 .turkish-word {
     position: fixed;
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     padding: 15px 30px;
-    background: white;  /* Şeffaf arkaplan yerine beyaz yapıldı */
+    background: white;
     border-radius: 15px;
-    color: #FF0000;    /* Beyaz yazı yerine kırmızı yapıldı */
+    color: #FF0000;
     font-size: 2rem;
     backdrop-filter: blur(5px);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -308,9 +306,8 @@ body {
     left: 0;
 }
 
-/* İngilizce butonu */
 .category-btn[data-category="english"] {
-    background: #6C5CE7;  /* Mor */
+    background: #6C5CE7;
     box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
 }
 
@@ -319,9 +316,8 @@ body {
     box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
 }
 
-/* Doğru Yazım butonu */
 .category-btn[data-category="spelling"] {
-    background: #20C997;  /* Yeşil */
+    background: #20C997;
     box-shadow: 0 4px 15px rgba(32, 201, 151, 0.3);
 }
 
@@ -330,7 +326,6 @@ body {
     box-shadow: 0 6px 20px rgba(32, 201, 151, 0.4);
 }
 
-/* Genel buton stilleri için hover efektini koru */
 .category-btn:hover, .difficulty-btn:hover {
     transform: translateY(-3px);
-} 
+}
