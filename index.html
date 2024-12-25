@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kelime Öğrenme Oyunu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Başlangıç ekranı -->
+        <div class="start-screen" id="startScreen">
+            <h1>Kelime Öğrenme Oyunu</h1>
+            <div class="category-selection">
+                <h2>Kategori Seçin:</h2>
+                <div class="category-buttons">
+                    <button class="category-btn" data-category="english">İngilizce</button>
+                    <button class="category-btn" data-category="spelling">Doğru Yazım</button>
+                </div>
+            </div>
+            <div class="difficulty-selection" style="display: none;">
+                <h2>Zorluk Seviyesi Seçin:</h2>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn" data-level="kolay">Kolay</button>
+                    <button class="difficulty-btn" data-level="orta">Orta</button>
+                    <button class="difficulty-btn" data-level="zor">Zor</button>
+                </div>
+                <button class="back-to-category">← Kategoriye Dön</button>
+            </div>
+        </div>
+
+        <!-- Oyun ekranı -->
+        <div class="game-screen" id="gameScreen" style="display: none;">
+            <div class="menu">
+                <div class="score">Puan: <span id="score">0</span></div>
+                <button class="back-btn" id="backButton">Ana Menü</button>
+            </div>
+            
+            <div class="game-area">
+                <div id="balloons-container" class="balloons-container"></div>
+                <div class="turkish-word" id="current-word"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ses dosyaları -->
+    <audio id="background-music" loop preload="auto">
+        <source src="assets/sounds/background.mp3" type="audio/mp3">
+    </audio>
+    <audio id="pop-sound" preload="auto">
+        <source src="assets/sounds/pop.mp3" type="audio/mp3">
+    </audio>
+    <audio id="correct-sound" preload="auto">
+        <source src="assets/sounds/correct.mp3" type="audio/mp3">
+    </audio>
+    <audio id="wrong-sound" preload="auto">
+        <source src="assets/sounds/wrong.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="js/words/english.js"></script>
+    <script src="js/words/spelling.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/balloon.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html> 
