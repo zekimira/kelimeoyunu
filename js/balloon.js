@@ -38,10 +38,11 @@ class Balloon {
         
         // Mobil için boyut ayarlaması
         if (isMobile) {
-            this.element.style.minWidth = '80px';
-            this.element.style.maxWidth = '100px';
-            this.element.style.height = '100px';
-            this.element.style.fontSize = '14px';
+            this.element.style.minWidth = '100px';
+            this.element.style.maxWidth = '130px';
+            this.element.style.height = '120px';
+            this.element.style.fontSize = '16px';
+            this.element.style.padding = '15px';
         }
         
         this.element.addEventListener('click', () => onClickCallback(word, this));
