@@ -292,13 +292,16 @@ body {
     left: 50%;
     transform: translateX(-50%);
     padding: 15px 30px;
-    background: white;  /* Şeffaf arkaplan yerine beyaz yapıldı */
+    background: rgba(255, 255, 255, 0.95);  /* Beyaz arka plan */
     border-radius: 15px;
-    color: #FF0000;    /* Beyaz yazı yerine kırmızı yapıldı */
+    color: #FF3B3B;  /* Canlı kırmızı yazı rengi */
     font-size: 2rem;
+    font-weight: bold;  /* Yazıyı kalın yaptık */
     backdrop-filter: blur(5px);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: none;  /* Text shadow'u kaldırdık */
     z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Hafif gölge ekledik */
+    border: 2px solid rgba(255, 255, 255, 0.8);  /* İnce beyaz border */
 }
 
 .game-area {
