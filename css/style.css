@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    background: linear-gradient(-45deg, #FF85E1, #85E5FF, #FFE485, #85FFB7);
     overflow: hidden;
 }
 
@@ -179,7 +179,8 @@ body {
         min-width: 100px;
         max-width: 130px;
         height: 120px;
-        font-size: 16px;
+        font-size: 18px;
+        font-weight: 800;
         padding: 15px;
     }
 
